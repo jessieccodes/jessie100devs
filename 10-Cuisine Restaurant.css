@@ -1,0 +1,258 @@
+/* Box Model Hack */
+* {
+    box-sizing: border-box;
+}
+  
+  /* Clear fix hack */
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+  
+.clear {
+    clear: both;
+}
+
+p{
+    line-height: 1.5;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+html{
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+h1{
+    font-size: 3.5rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+h2{
+    font-size: 3rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+    text-align: center;
+}
+h4{
+    font-size: 1rem;
+    color: orange;
+    text-align: center;
+}
+
+.button{
+    background-color: orange;
+    color: white;
+    border-radius: .5em;
+    border: .8em solid orange;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button:hover{
+    background: blue;
+    border-color:blue;
+    }
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    border-bottom: 1px solid orange;
+    color: orange;
+}
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+body{
+    background: rgb(250, 250, 250);
+}
+
+main nav ul{
+    display: flex;
+    flex-basis: 60%;
+    padding-left: 40%;
+    flex-direction: row;
+    justify-content:space-evenly;
+    list-style-type: none;
+}
+
+body main{
+    background: rgb(242, 246, 247);
+    background-image: url(berrybowl.png);
+    background-repeat: no-repeat;
+    background-position: 100% 0%;
+    display: flex;
+    flex-direction:  column;
+    height: 550px;
+}
+
+main section{
+    width: 20%;
+}
+
+main h1, header form{
+    padding: 0 10%;
+}
+
+header form input{
+    font-size: 1em;
+    padding: 0.75%;
+}
+
+main section ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+main a{
+    text-decoration: none;
+    color: black;
+}
+
+main + section{
+    background: rgb(250, 250, 250);
+    background-image: url(berrypie.png);
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+    display: flex;
+    flex-direction:  column;
+    height: 75%;
+    padding: 10% 5%;
+}
+
+main + section h2, main + section h4, main + section p, main + section button{
+    margin-left: 50%;
+    text-align: left;
+}
+
+main + section button{
+    width: 13%;
+}
+
+main + section + section {
+    background: rgb(235, 243, 245);
+    padding: 3% 10%;
+}
+
+main + section + section ul{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+.mealType{
+    margin: 0% 15%;
+}
+ 
+.specialityMeal {
+    width: 90%;
+    display: block;
+    transition: 0.5s ease;
+    opacity: 1;
+    position: relative;
+
+}
+
+
+.specialityMeal:hover {
+    opacity: 0.3;
+}
+
+.itemInfo{
+    position: relative;
+    top: -60%;
+    bottom: 0;
+    display: none;
+}
+
+.specialityMeal:hover + .itemInfo{
+    display: inline-block;
+}
+
+.itemInfo *{
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.itemPrice {
+    font-family:'Trebuchet MS';
+    color: white;
+    font-size: 1.5rem;
+
+}
+
+.itemName {
+    font-family:'Segoe UI';
+    color: white;
+    font-size: 1rem;
+    display: block;
+}
+
+.rating{
+    color: orange;
+    display: inline-block;
+}
+.openingHours, body section:last-child{
+    text-align: center;
+    padding: 2% 15%;
+
+}
+
+.phoneNum{
+    font-size: 1.75em;
+    color: orange;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+
+}
+
+.schedule{
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.time{
+    font-size: 1.75em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+.timeDate{
+    box-sizing: border-box;
+}
+
+
+.name{
+    font-size: 1.25em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.headshot {
+    border-radius: 60%;
+}
+
+.quotes{
+    font-style: italic;
+    color: darkgray
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+  
